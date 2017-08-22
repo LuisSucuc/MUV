@@ -1,0 +1,56 @@
+{{extend 'layout.html'}}
+
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>Proyecto Física 1</h5>
+                </div>
+                <div class="ibox-content">
+                    <br>
+                    <div class="row text-center">
+                        <div class="col-md-4 col-md-offset-4">
+                            <a class="btn btn-primary btn-block  btn-lg" href="{{=URL('calcular','velo_fin')}}"><h4>Velocidad final</h4></a>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row text-center">
+                        <div class="col-md-4 col-md-offset-4">
+                            <a class="btn btn-danger btn-block  btn-lg" href="{{=URL('calcular','velo_ini')}}"><h4>Velocidad iniciar</h4></a>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row text-center">
+                        <div class="col-md-4 col-md-offset-4">
+                            <a class="btn btn-success btn-block  btn-lg" href="{{=URL('calcular','distancia')}}"><h4>Distancia</h4></a>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row text-center">
+                        <div class="col-md-4 col-md-offset-4">
+                            <a class="btn btn-warning btn-block  btn-lg" href="{{=URL('calcular','aceleracion')}}"><h4>Aceleración</h4></a>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row text-center">
+                        <div class="col-md-4 col-md-offset-4">
+                            <a class="btn btn-info btn-block  btn-lg" href="{{=URL('calcular','tiempo')}}"><h4>Tiempo</h4></a>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+	 $(function() {
+	 	$( "#calcular" ).addClass( "active" );
+        $( "#seleccionar" ).addClass( "active" );
+	});
+</script>

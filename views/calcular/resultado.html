@@ -1,0 +1,51 @@
+{{extend 'layout.html'}}
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h2><span class="bg-danger p-xs b-r-sm">{{=resultado}}</span></h2>
+                </div>
+                <div class="ibox-content">
+
+                    <div class="row">
+                        <div class="col-md-3">
+                            <p>Fórmula utilizada para graficar</p>
+                            <img src="{{=URL('static','graficar.png')}}" class="img-thumbnail" alt="Cinque Terre" width="200" height="auto">
+                        </div>
+                    </div>
+
+                    <br><br>
+                    <button class="btn btn-success"> <i class="fa fa-flash"></i> Animar</button>
+                    <br><br>
+                    <div id="carro" style="height:75px;width:150px;position:absolute;">
+                         <img src="{{=URL('static','1.png')}}" class="img-responsive" style="width:150px"/>
+                    </div>
+                    <br><br><br><br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+  $(document).ready(function(){
+      $("button").click(function(){
+          for (var i = 1; i < 100; i++) {
+              var x = 50 + ({{=Vo}} * i)  + (0.5 *i * i* {{=a}})
+              $("#carro").animate({
+                  left: x,
+              },{duration: 1000});
+              if (x >1000 || x < -100){
+                  break;
+              }
+           }
+      });
+  });
+
+ $(function() {
+     $( "#calcular" ).addClass( "active" );
+ });
+
+  </script>

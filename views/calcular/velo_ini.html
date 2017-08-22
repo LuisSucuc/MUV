@@ -1,0 +1,66 @@
+{{extend 'layout.html'}}
+
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5><span class="bg-danger p-xs b-r-sm">Velocidad inicial</span></h5>
+                </div>
+                <div class="ibox-content">
+
+                <p class="text-center"><strong>Fórmula a utilizar</strong></p>
+                <div class="text-center">
+                    <img src="{{=URL('static','velo_ini.png')}}" class="img-thumbnail" width="200" height="auto">
+                </div>
+
+
+                <hr>
+                <br>
+                {{=formulario.custom.begin}}
+
+            		<div class="form-group">
+                        <label class="col-md-2 control-label">{{=T('Velocidad final')}} <small>({{=T('Vf')}})</small></label>
+            			<div class="col-md-2"> <span class="help-block m-b-none">{{=formulario.custom.widget.velo_fin}}</span>
+            			</div>
+            		</div>
+
+            		<div class="form-group">
+                        <label class="col-md-2 control-label">{{=T('Aceleración')}} <small>({{=T('a')}})</small></label>
+            			<div class="col-md-2">
+            				<span class="help-block m-b-none">{{=formulario.custom.widget.aceleracion}}</span>
+            			</div>
+            		</div>
+
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">{{=T('Tiempo')}} <small>({{=T('t')}})</small></label>
+            			<div class="col-md-2">
+            				<span class="help-block m-b-none">{{=formulario.custom.widget.tiempo}}</span>
+            			</div>
+            		</div>
+
+            		<br><br><br><br>
+            		<div class="row" >
+            			<div class="col-xs-12 col-sm-12">
+            				<div class="pull-right">
+            					{{=formulario.custom.submit}}
+            				</div>
+            			</div>
+            		</div><br>
+
+                {{=formulario.custom.end}}
+
+                <br>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+	 $(function() {
+	 	$( "#calcular" ).addClass( "active" );
+        $( "#velo_ini" ).addClass( "active" );
+	});
+</script>
